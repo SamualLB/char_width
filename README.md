@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      char_width:
-       github: your-github-user/char_width
+       github: SamualLB/char_width
    ```
 
 2. Run `shards install`
@@ -28,7 +28,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/char_width/fork>)
+1. Fork it (<https://github.com/SamualLB/char_width/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +36,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Samual Black](https://github.com/your-github-user) - creator and maintainer
+- [Samual Black](https://github.com/SamualLB) - creator and maintainer

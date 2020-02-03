@@ -1,4 +1,8 @@
 struct Char
+  # Based Based on https://www.cl.cam.ac.uk/~mgk25/ucs/wcwidth.c
+  #
+  # This is an implementation of wcwidth() and wcswidth() (defined in
+  # IEEE Std 1002.1-2001) for Unicode.
   UNICODE_COMBINING_CHARS = {
     0x0300..0x036F, 0x0483..0x0486, 0x0488..0x0489,
     0x0591..0x05BD, 0x05BF..0x05BF, 0x05C1..0x05C2,
@@ -74,7 +78,6 @@ struct Char
 end
 
 class String
-
   def width : Int32
     width = 0
     each_char do |c|
