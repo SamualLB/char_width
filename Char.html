@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="char_width">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="char_width">
+  <title>Char - char_width master</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          char_width
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" current" data-id="char_width/Char" data-name="char">
+      <a href="Char.html">Char</a>
+      
+    </li>
+  
+  <li class=" " data-id="char_width/String" data-name="string">
+      <a href="String.html">String</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> Char
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="Char.html">Char</a></li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>A <code><a href="Char.html">Char</a></code> represents a <a href="http://en.wikipedia.org/wiki/Unicode">Unicode</a> <a href="http://en.wikipedia.org/wiki/Code_point">code point</a>.
+It occupies 32 bits.</p>
+
+<p>It is created by enclosing an UTF-8 character in single quotes.</p>
+
+<pre><code class="language-crystal"><span class="s">&#39;a&#39;</span>
+<span class="s">&#39;z&#39;</span>
+<span class="s">&#39;0&#39;</span>
+<span class="s">&#39;_&#39;</span>
+<span class="s">&#39;あ&#39;</span></code></pre>
+
+<p>You can use a backslash to denote some characters:</p>
+
+<pre><code class="language-crystal"><span class="s">&#39;\&#39;&#39;</span> <span class="c"># single quote</span>
+<span class="s">&#39;\\&#39;</span> <span class="c"># backslash</span>
+<span class="s">&#39;\e&#39;</span> <span class="c"># escape</span>
+<span class="s">&#39;\f&#39;</span> <span class="c"># form feed</span>
+<span class="s">&#39;\n&#39;</span> <span class="c"># newline</span>
+<span class="s">&#39;\r&#39;</span> <span class="c"># carriage return</span>
+<span class="s">&#39;\t&#39;</span> <span class="c"># tab</span>
+<span class="s">&#39;\v&#39;</span> <span class="c"># vertical tab</span></code></pre>
+
+<p>You can use a backslash followed by an <em>u</em> and four hexadecimal characters to denote a unicode codepoint written:</p>
+
+<pre><code class="language-crystal"><span class="s">&#39;\u0041&#39;</span> <span class="c"># == &#39;A&#39;</span></code></pre>
+
+<p>Or you can use curly braces and specify up to four hexadecimal numbers:</p>
+
+<pre><code class="language-crystal"><span class="s">&#39;\u{41}&#39;</span> <span class="c"># == &#39;A&#39;</span></code></pre>
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">Comparable(<a href="Char.html">Char</a>)</li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/SamualLB/char_width/blob/d6795280696d99d2202d16da8356d2e0fcbfbe9d/src/char_width.cr#L1" target="_blank">
+        char_width.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="UNICODE_COMBINING_CHARS">
+        <strong>UNICODE_COMBINING_CHARS</strong> = <code>{<span class="n">768</span>..<span class="n">879</span>, <span class="n">1155</span>..<span class="n">1158</span>, <span class="n">1160</span>..<span class="n">1161</span>, <span class="n">1425</span>..<span class="n">1469</span>, <span class="n">1471</span>..<span class="n">1471</span>, <span class="n">1473</span>..<span class="n">1474</span>, <span class="n">1476</span>..<span class="n">1477</span>, <span class="n">1479</span>..<span class="n">1479</span>, <span class="n">1536</span>..<span class="n">1539</span>, <span class="n">1552</span>..<span class="n">1557</span>, <span class="n">1611</span>..<span class="n">1630</span>, <span class="n">1648</span>..<span class="n">1648</span>, <span class="n">1750</span>..<span class="n">1764</span>, <span class="n">1767</span>..<span class="n">1768</span>, <span class="n">1770</span>..<span class="n">1773</span>, <span class="n">1807</span>..<span class="n">1807</span>, <span class="n">1809</span>..<span class="n">1809</span>, <span class="n">1840</span>..<span class="n">1866</span>, <span class="n">1958</span>..<span class="n">1968</span>, <span class="n">2027</span>..<span class="n">2035</span>, <span class="n">2305</span>..<span class="n">2306</span>, <span class="n">2364</span>..<span class="n">2364</span>, <span class="n">2369</span>..<span class="n">2376</span>, <span class="n">2381</span>..<span class="n">2381</span>, <span class="n">2385</span>..<span class="n">2388</span>, <span class="n">2402</span>..<span class="n">2403</span>, <span class="n">2433</span>..<span class="n">2433</span>, <span class="n">2492</span>..<span class="n">2492</span>, <span class="n">2497</span>..<span class="n">2500</span>, <span class="n">2509</span>..<span class="n">2509</span>, <span class="n">2530</span>..<span class="n">2531</span>, <span class="n">2561</span>..<span class="n">2562</span>, <span class="n">2620</span>..<span class="n">2620</span>, <span class="n">2625</span>..<span class="n">2626</span>, <span class="n">2631</span>..<span class="n">2632</span>, <span class="n">2635</span>..<span class="n">2637</span>, <span class="n">2672</span>..<span class="n">2673</span>, <span class="n">2689</span>..<span class="n">2690</span>, <span class="n">2748</span>..<span class="n">2748</span>, <span class="n">2753</span>..<span class="n">2757</span>, <span class="n">2759</span>..<span class="n">2760</span>, <span class="n">2765</span>..<span class="n">2765</span>, <span class="n">2786</span>..<span class="n">2787</span>, <span class="n">2817</span>..<span class="n">2817</span>, <span class="n">2876</span>..<span class="n">2876</span>, <span class="n">2879</span>..<span class="n">2879</span>, <span class="n">2881</span>..<span class="n">2883</span>, <span class="n">2893</span>..<span class="n">2893</span>, <span class="n">2902</span>..<span class="n">2902</span>, <span class="n">2946</span>..<span class="n">2946</span>, <span class="n">3008</span>..<span class="n">3008</span>, <span class="n">3021</span>..<span class="n">3021</span>, <span class="n">3134</span>..<span class="n">3136</span>, <span class="n">3142</span>..<span class="n">3144</span>, <span class="n">3146</span>..<span class="n">3149</span>, <span class="n">3157</span>..<span class="n">3158</span>, <span class="n">3260</span>..<span class="n">3260</span>, <span class="n">3263</span>..<span class="n">3263</span>, <span class="n">3270</span>..<span class="n">3270</span>, <span class="n">3276</span>..<span class="n">3277</span>, <span class="n">3298</span>..<span class="n">3299</span>, <span class="n">3393</span>..<span class="n">3395</span>, <span class="n">3405</span>..<span class="n">3405</span>, <span class="n">3530</span>..<span class="n">3530</span>, <span class="n">3538</span>..<span class="n">3540</span>, <span class="n">3542</span>..<span class="n">3542</span>, <span class="n">3633</span>..<span class="n">3633</span>, <span class="n">3636</span>..<span class="n">3642</span>, <span class="n">3655</span>..<span class="n">3662</span>, <span class="n">3761</span>..<span class="n">3761</span>, <span class="n">3764</span>..<span class="n">3769</span>, <span class="n">3771</span>..<span class="n">3772</span>, <span class="n">3784</span>..<span class="n">3789</span>, <span class="n">3864</span>..<span class="n">3865</span>, <span class="n">3893</span>..<span class="n">3893</span>, <span class="n">3895</span>..<span class="n">3895</span>, <span class="n">3897</span>..<span class="n">3897</span>, <span class="n">3953</span>..<span class="n">3966</span>, <span class="n">3968</span>..<span class="n">3972</span>, <span class="n">3974</span>..<span class="n">3975</span>, <span class="n">3984</span>..<span class="n">3991</span>, <span class="n">3993</span>..<span class="n">4028</span>, <span class="n">4038</span>..<span class="n">4038</span>, <span class="n">4141</span>..<span class="n">4144</span>, <span class="n">4146</span>..<span class="n">4146</span>, <span class="n">4150</span>..<span class="n">4151</span>, <span class="n">4153</span>..<span class="n">4153</span>, <span class="n">4184</span>..<span class="n">4185</span>, <span class="n">4448</span>..<span class="n">4607</span>, <span class="n">4959</span>..<span class="n">4959</span>, <span class="n">5906</span>..<span class="n">5908</span>, <span class="n">5938</span>..<span class="n">5940</span>, <span class="n">5970</span>..<span class="n">5971</span>, <span class="n">6002</span>..<span class="n">6003</span>, <span class="n">6068</span>..<span class="n">6069</span>, <span class="n">6071</span>..<span class="n">6077</span>, <span class="n">6086</span>..<span class="n">6086</span>, <span class="n">6089</span>..<span class="n">6099</span>, <span class="n">6109</span>..<span class="n">6109</span>, <span class="n">6155</span>..<span class="n">6157</span>, <span class="n">6313</span>..<span class="n">6313</span>, <span class="n">6432</span>..<span class="n">6434</span>, <span class="n">6439</span>..<span class="n">6440</span>, <span class="n">6450</span>..<span class="n">6450</span>, <span class="n">6457</span>..<span class="n">6459</span>, <span class="n">6679</span>..<span class="n">6680</span>, <span class="n">6912</span>..<span class="n">6915</span>, <span class="n">6964</span>..<span class="n">6964</span>, <span class="n">6966</span>..<span class="n">6970</span>, <span class="n">6972</span>..<span class="n">6972</span>, <span class="n">6978</span>..<span class="n">6978</span>, <span class="n">7019</span>..<span class="n">7027</span>, <span class="n">7616</span>..<span class="n">7626</span>, <span class="n">7678</span>..<span class="n">7679</span>, <span class="n">8203</span>..<span class="n">8207</span>, <span class="n">8234</span>..<span class="n">8238</span>, <span class="n">8288</span>..<span class="n">8291</span>, <span class="n">8298</span>..<span class="n">8303</span>, <span class="n">8400</span>..<span class="n">8431</span>, <span class="n">12330</span>..<span class="n">12335</span>, <span class="n">12441</span>..<span class="n">12442</span>, <span class="n">43014</span>..<span class="n">43014</span>, <span class="n">43019</span>..<span class="n">43019</span>, <span class="n">43045</span>..<span class="n">43046</span>, <span class="n">64286</span>..<span class="n">64286</span>, <span class="n">65024</span>..<span class="n">65039</span>, <span class="n">65056</span>..<span class="n">65059</span>, <span class="n">65279</span>..<span class="n">65279</span>, <span class="n">65529</span>..<span class="n">65531</span>, <span class="n">68097</span>..<span class="n">68099</span>, <span class="n">68101</span>..<span class="n">68102</span>, <span class="n">68108</span>..<span class="n">68111</span>, <span class="n">68152</span>..<span class="n">68154</span>, <span class="n">68159</span>..<span class="n">68159</span>, <span class="n">119143</span>..<span class="n">119145</span>, <span class="n">119155</span>..<span class="n">119170</span>, <span class="n">119173</span>..<span class="n">119179</span>, <span class="n">119210</span>..<span class="n">119213</span>, <span class="n">119362</span>..<span class="n">119364</span>, <span class="n">917505</span>..<span class="n">917505</span>, <span class="n">917536</span>..<span class="n">917631</span>, <span class="n">917760</span>..<span class="n">917999</span>}</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Based on https://www.cl.cam.ac.uk/~mgk25/ucs/wcwidth.c</p>
+
+<p>This is an implementation of wcwidth() and wcswidth() (defined in
+IEEE Std 1002.1-2001) for Unicode.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="UNICODE_INTERVAL_CHARS">
+        <strong>UNICODE_INTERVAL_CHARS</strong> = <code>{<span class="n">161</span>..<span class="n">161</span>, <span class="n">164</span>..<span class="n">164</span>, <span class="n">167</span>..<span class="n">168</span>, <span class="n">170</span>..<span class="n">170</span>, <span class="n">174</span>..<span class="n">174</span>, <span class="n">176</span>..<span class="n">180</span>, <span class="n">182</span>..<span class="n">186</span>, <span class="n">188</span>..<span class="n">191</span>, <span class="n">198</span>..<span class="n">198</span>, <span class="n">208</span>..<span class="n">208</span>, <span class="n">215</span>..<span class="n">216</span>, <span class="n">222</span>..<span class="n">225</span>, <span class="n">230</span>..<span class="n">230</span>, <span class="n">232</span>..<span class="n">234</span>, <span class="n">236</span>..<span class="n">237</span>, <span class="n">240</span>..<span class="n">240</span>, <span class="n">242</span>..<span class="n">243</span>, <span class="n">247</span>..<span class="n">250</span>, <span class="n">252</span>..<span class="n">252</span>, <span class="n">254</span>..<span class="n">254</span>, <span class="n">257</span>..<span class="n">257</span>, <span class="n">273</span>..<span class="n">273</span>, <span class="n">275</span>..<span class="n">275</span>, <span class="n">283</span>..<span class="n">283</span>, <span class="n">294</span>..<span class="n">295</span>, <span class="n">299</span>..<span class="n">299</span>, <span class="n">305</span>..<span class="n">307</span>, <span class="n">312</span>..<span class="n">312</span>, <span class="n">319</span>..<span class="n">322</span>, <span class="n">324</span>..<span class="n">324</span>, <span class="n">328</span>..<span class="n">331</span>, <span class="n">333</span>..<span class="n">333</span>, <span class="n">338</span>..<span class="n">339</span>, <span class="n">358</span>..<span class="n">359</span>, <span class="n">363</span>..<span class="n">363</span>, <span class="n">462</span>..<span class="n">462</span>, <span class="n">464</span>..<span class="n">464</span>, <span class="n">466</span>..<span class="n">466</span>, <span class="n">468</span>..<span class="n">468</span>, <span class="n">470</span>..<span class="n">470</span>, <span class="n">472</span>..<span class="n">472</span>, <span class="n">474</span>..<span class="n">474</span>, <span class="n">476</span>..<span class="n">476</span>, <span class="n">593</span>..<span class="n">593</span>, <span class="n">609</span>..<span class="n">609</span>, <span class="n">708</span>..<span class="n">708</span>, <span class="n">711</span>..<span class="n">711</span>, <span class="n">713</span>..<span class="n">715</span>, <span class="n">717</span>..<span class="n">717</span>, <span class="n">720</span>..<span class="n">720</span>, <span class="n">728</span>..<span class="n">731</span>, <span class="n">733</span>..<span class="n">733</span>, <span class="n">735</span>..<span class="n">735</span>, <span class="n">913</span>..<span class="n">929</span>, <span class="n">931</span>..<span class="n">937</span>, <span class="n">945</span>..<span class="n">961</span>, <span class="n">963</span>..<span class="n">969</span>, <span class="n">1025</span>..<span class="n">1025</span>, <span class="n">1040</span>..<span class="n">1103</span>, <span class="n">1105</span>..<span class="n">1105</span>, <span class="n">8208</span>..<span class="n">8208</span>, <span class="n">8211</span>..<span class="n">8214</span>, <span class="n">8216</span>..<span class="n">8217</span>, <span class="n">8220</span>..<span class="n">8221</span>, <span class="n">8224</span>..<span class="n">8226</span>, <span class="n">8228</span>..<span class="n">8231</span>, <span class="n">8240</span>..<span class="n">8240</span>, <span class="n">8242</span>..<span class="n">8243</span>, <span class="n">8245</span>..<span class="n">8245</span>, <span class="n">8251</span>..<span class="n">8251</span>, <span class="n">8254</span>..<span class="n">8254</span>, <span class="n">8308</span>..<span class="n">8308</span>, <span class="n">8319</span>..<span class="n">8319</span>, <span class="n">8321</span>..<span class="n">8324</span>, <span class="n">8364</span>..<span class="n">8364</span>, <span class="n">8451</span>..<span class="n">8451</span>, <span class="n">8453</span>..<span class="n">8453</span>, <span class="n">8457</span>..<span class="n">8457</span>, <span class="n">8467</span>..<span class="n">8467</span>, <span class="n">8470</span>..<span class="n">8470</span>, <span class="n">8481</span>..<span class="n">8482</span>, <span class="n">8486</span>..<span class="n">8486</span>, <span class="n">8491</span>..<span class="n">8491</span>, <span class="n">8531</span>..<span class="n">8532</span>, <span class="n">8539</span>..<span class="n">8542</span>, <span class="n">8544</span>..<span class="n">8555</span>, <span class="n">8560</span>..<span class="n">8569</span>, <span class="n">8592</span>..<span class="n">8601</span>, <span class="n">8632</span>..<span class="n">8633</span>, <span class="n">8658</span>..<span class="n">8658</span>, <span class="n">8660</span>..<span class="n">8660</span>, <span class="n">8679</span>..<span class="n">8679</span>, <span class="n">8704</span>..<span class="n">8704</span>, <span class="n">8706</span>..<span class="n">8707</span>, <span class="n">8711</span>..<span class="n">8712</span>, <span class="n">8715</span>..<span class="n">8715</span>, <span class="n">8719</span>..<span class="n">8719</span>, <span class="n">8721</span>..<span class="n">8721</span>, <span class="n">8725</span>..<span class="n">8725</span>, <span class="n">8730</span>..<span class="n">8730</span>, <span class="n">8733</span>..<span class="n">8736</span>, <span class="n">8739</span>..<span class="n">8739</span>, <span class="n">8741</span>..<span class="n">8741</span>, <span class="n">8743</span>..<span class="n">8748</span>, <span class="n">8750</span>..<span class="n">8750</span>, <span class="n">8756</span>..<span class="n">8759</span>, <span class="n">8764</span>..<span class="n">8765</span>, <span class="n">8776</span>..<span class="n">8776</span>, <span class="n">8780</span>..<span class="n">8780</span>, <span class="n">8786</span>..<span class="n">8786</span>, <span class="n">8800</span>..<span class="n">8801</span>, <span class="n">8804</span>..<span class="n">8807</span>, <span class="n">8810</span>..<span class="n">8811</span>, <span class="n">8814</span>..<span class="n">8815</span>, <span class="n">8834</span>..<span class="n">8835</span>, <span class="n">8838</span>..<span class="n">8839</span>, <span class="n">8853</span>..<span class="n">8853</span>, <span class="n">8857</span>..<span class="n">8857</span>, <span class="n">8869</span>..<span class="n">8869</span>, <span class="n">8895</span>..<span class="n">8895</span>, <span class="n">8978</span>..<span class="n">8978</span>, <span class="n">9312</span>..<span class="n">9449</span>, <span class="n">9451</span>..<span class="n">9547</span>, <span class="n">9552</span>..<span class="n">9587</span>, <span class="n">9600</span>..<span class="n">9615</span>, <span class="n">9618</span>..<span class="n">9621</span>, <span class="n">9632</span>..<span class="n">9633</span>, <span class="n">9635</span>..<span class="n">9641</span>, <span class="n">9650</span>..<span class="n">9651</span>, <span class="n">9654</span>..<span class="n">9655</span>, <span class="n">9660</span>..<span class="n">9661</span>, <span class="n">9664</span>..<span class="n">9665</span>, <span class="n">9670</span>..<span class="n">9672</span>, <span class="n">9675</span>..<span class="n">9675</span>, <span class="n">9678</span>..<span class="n">9681</span>, <span class="n">9698</span>..<span class="n">9701</span>, <span class="n">9711</span>..<span class="n">9711</span>, <span class="n">9733</span>..<span class="n">9734</span>, <span class="n">9737</span>..<span class="n">9737</span>, <span class="n">9742</span>..<span class="n">9743</span>, <span class="n">9748</span>..<span class="n">9749</span>, <span class="n">9756</span>..<span class="n">9756</span>, <span class="n">9758</span>..<span class="n">9758</span>, <span class="n">9792</span>..<span class="n">9792</span>, <span class="n">9794</span>..<span class="n">9794</span>, <span class="n">9824</span>..<span class="n">9825</span>, <span class="n">9827</span>..<span class="n">9829</span>, <span class="n">9831</span>..<span class="n">9834</span>, <span class="n">9836</span>..<span class="n">9837</span>, <span class="n">9839</span>..<span class="n">9839</span>, <span class="n">10045</span>..<span class="n">10045</span>, <span class="n">10102</span>..<span class="n">10111</span>, <span class="n">57344</span>..<span class="n">63743</span>, <span class="n">65533</span>..<span class="n">65533</span>, <span class="n">983040</span>..<span class="n">1048573</span>, <span class="n">1048576</span>..<span class="n">1114109</span>}</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#width:Int32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#width_cjk:Int32-instance-method" class="signature"><strong>#width_cjk</strong> : Int32</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="width:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>width</strong> : Int32
+
+        <a class="method-permalink" href="#width:Int32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/SamualLB/char_width/blob/d6795280696d99d2202d16da8356d2e0fcbfbe9d/src/char_width.cr#L112" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="width_cjk:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>width_cjk</strong> : Int32
+
+        <a class="method-permalink" href="#width_cjk:Int32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/SamualLB/char_width/blob/d6795280696d99d2202d16da8356d2e0fcbfbe9d/src/char_width.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
