@@ -42,5 +42,29 @@ describe String do
       "\t".width.should eq -1
       "Tab\tSpace".width.should eq -1
     end
+
+    it "returns correct width for ancient Greek" do
+      "Ἰοὺ ἰού· τὰ πάντʼ ἂν ἐξήκοι σαφῆ.".width.should eq 33
+    end
+
+    it "returns correct width for Russian" do
+      "По оживлённым берегам".width.should eq 21
+    end
+  end
+
+  describe "width_cjk" do
+    it "only effects non-ambiguos CJK characters" do
+      "".width_cjk.should eq 0
+      "Hello!".width_cjk.should eq 6
+    end
+
+    it "still returns -1 when encountering control characters" do
+      "По оживлённым берегам\n".width_cjk.should eq -1
+      "Tab\tSpace".width_cjk.should eq -1
+    end
+
+    it "defines the width of ambiguous characters as 2" do
+      "По оживлённым берегам".width_cjk.should eq 40
+    end
   end
 end
