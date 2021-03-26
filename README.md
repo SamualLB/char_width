@@ -8,11 +8,11 @@ Useful in console applications to stop weird formatting on some none-English cha
 
 1. Add the dependency to your `shard.yml`:
 
-   ```yaml
-   dependencies:
-     char_width:
-       github: SamualLB/char_width
-   ```
+```yaml
+dependencies:
+  char_width:
+    github: SamualLB/char_width
+```
 
 2. Run `shards install`
 
