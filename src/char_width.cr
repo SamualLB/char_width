@@ -1,5 +1,5 @@
 struct Char
-  # Based Based on https://www.cl.cam.ac.uk/~mgk25/ucs/wcwidth.c
+  # Based on https://www.cl.cam.ac.uk/~mgk25/ucs/wcwidth.c
   #
   # This is an implementation of wcwidth() and wcswidth() (defined in
   # IEEE Std 1002.1-2001) for Unicode.
@@ -51,7 +51,7 @@ struct Char
     0x10A38..0x10A3A, 0x10A3F..0x10A3F, 0x1D167..0x1D169,
     0x1D173..0x1D182, 0x1D185..0x1D18B, 0x1D1AA..0x1D1AD,
     0x1D242..0x1D244, 0xE0001..0xE0001, 0xE0020..0xE007F,
-    0xE0100..0xE01EF
+    0xE0100..0xE01EF,
   }
 
   UNICODE_INTERVAL_CHARS = {
@@ -106,9 +106,8 @@ struct Char
     0x2642..0x2642, 0x2660..0x2661, 0x2663..0x2665,
     0x2667..0x266A, 0x266C..0x266D, 0x266F..0x266F,
     0x273D..0x273D, 0x2776..0x277F, 0xE000..0xF8FF,
-    0xFFFD..0xFFFD, 0xF0000..0xFFFFD, 0x100000..0x10FFFD
+    0xFFFD..0xFFFD, 0xF0000..0xFFFFD, 0x100000..0x10FFFD,
   }
-
 
   def width : Int32
     return 0 if ord == 0
@@ -117,18 +116,18 @@ struct Char
     UNICODE_COMBINING_CHARS.each { |range| return 0 if range.includes?(ord) }
 
     return 2 if ord >= 0x1100 &&
-      (ord <= 0x115f ||                    # Hangul Jamo init. consonants
-       ord == 0x2329 || ord == 0x232a ||
-       (ord >= 0x2e80 && ord <= 0xa4cf &&
-       ord != 0x303f) ||                   # CJK ... Yi
-       (ord >= 0xac00 && ord <= 0xd7a3) || # Hangul Syllables
-       (ord >= 0xf900 && ord <= 0xfaff) || # CJK Compatibility Ideographs
-       (ord >= 0xfe10 && ord <= 0xfe19) || # Vertical forms
-       (ord >= 0xfe30 && ord <= 0xfe6f) || # CJK Compatibility Forms
-       (ord >= 0xff00 && ord <= 0xff60) || # Fullwidth Forms
-       (ord >= 0xffe0 && ord <= 0xffe6) ||
-       (ord >= 0x20000 && ord <= 0x2fffd) ||
-       (ord >= 0x30000 && ord <= 0x3fffd))
+                (ord <= 0x115f || # Hangul Jamo init. consonants
+                ord == 0x2329 || ord == 0x232a ||
+                (ord >= 0x2e80 && ord <= 0xa4cf &&
+                ord != 0x303f) ||                   # CJK ... Yi
+                (ord >= 0xac00 && ord <= 0xd7a3) || # Hangul Syllables
+                (ord >= 0xf900 && ord <= 0xfaff) || # CJK Compatibility Ideographs
+                (ord >= 0xfe10 && ord <= 0xfe19) || # Vertical forms
+                (ord >= 0xfe30 && ord <= 0xfe6f) || # CJK Compatibility Forms
+                (ord >= 0xff00 && ord <= 0xff60) || # Fullwidth Forms
+                (ord >= 0xffe0 && ord <= 0xffe6) ||
+                (ord >= 0x20000 && ord <= 0x2fffd) ||
+                (ord >= 0x30000 && ord <= 0x3fffd))
     1
   end
 

@@ -1,6 +1,8 @@
 # char_width
 
-TODO: Write a description here
+Check the width of a string. Should take into account combined characters and stuff.
+
+Useful in console applications to stop weird formatting on some none-English characters.
 
 ## Installation
 
@@ -20,7 +22,16 @@ TODO: Write a description here
 require "char_width"
 ```
 
-TODO: Write usage instructions here
+Spec file is helpful, otherwise:
+
+```crystal
+'a'.width # => 1
+'\0'.width # => 0
+'\r'.width # => -1
+
+"abcde".width # => 5
+"Tab\tSpace".width # => -1
+```
 
 ## Development
 
